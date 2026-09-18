@@ -4,6 +4,7 @@ func main() {
 	world := NewWorld(40, 15)
 
 	addBorders(world)
+
 	addRectangle(
 		world,
 		10,
@@ -12,6 +13,7 @@ func main() {
 		4,
 		TileWall,
 	)
+
 	addRectangle(
 		world,
 		23,
@@ -21,7 +23,34 @@ func main() {
 		TileWater,
 	)
 
-	world.Print()
+	addRectangle(
+		world,
+		4,
+		9,
+		5,
+		3,
+		TileMountain,
+	)
+
+	addRectangle(
+		world,
+		19,
+		5,
+		10,
+		2,
+		TileForest,
+	)
+
+	addRectangle(
+		world,
+		30,
+		2,
+		5,
+		5,
+		TileSand,
+	)
+
+	PrintWorld(world)
 }
 
 func addBorders(world *World) {
