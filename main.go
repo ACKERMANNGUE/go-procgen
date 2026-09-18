@@ -3,7 +3,7 @@ package main
 func main() {
 	world := NewWorld(80, 25)
 
-	generator := NewGenerator(42)
+	generator := NewGenerator(1203)
 	generator.Generate(world)
 	generator.smooth(world, 1)
 	PrintWorld(world)

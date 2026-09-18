@@ -33,14 +33,34 @@ func (g *Generator) generateNoise(world *World) {
 func (g *Generator) randomTile() Tile {
 	value := g.random.Float64()
 	switch {
-	case value < 0.30:
+	case value < 0.10:
+		return TileCave
+	case value < 0.20:
+		return TileLava
+	case value < 0.22:
+		return TileRoad
+	case value < 0.35:
 		return TileGrass
-	case value < 0.55:
+	case value < 0.45:
 		return TileWater
+	case value < 0.55:
+		return TileSand
+	case value < 0.70:
+		return TileSwamp
 	case value < 0.75:
 		return TileForest
+	case value < 0.80:
+		return TileIce
+	case value < 0.85:
+		return TileRoad
 	case value < 0.90:
 		return TileMountain
+	case value < 0.92:
+		return TileCliff
+	case value < 0.94:
+		return TileBridge
+	case value < 0.95:
+		return TileSnow
 	default:
 		return TileGround
 	}

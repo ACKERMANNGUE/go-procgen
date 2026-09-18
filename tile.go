@@ -26,11 +26,11 @@ func (t Tile) Rune() rune {
 	case TileGround:
 		return '.'
 	case TileWall:
-		return '█'
+		return '#'
 	case TileWater:
 		return '~'
 	case TileMountain:
-		return '▲'
+		return '^'
 	case TileForest:
 		return '*'
 	case TileSand:
@@ -38,7 +38,7 @@ func (t Tile) Rune() rune {
 	case TileLava:
 		return '!'
 	case TileIce:
-		return '"'
+		return 'o'
 	case TileSwamp:
 		return '%'
 	case TileBridge:
@@ -46,15 +46,15 @@ func (t Tile) Rune() rune {
 	case TileDoor:
 		return '+'
 	case TileGrass:
-		return ','
+		return '"'
 	case TileSnow:
-		return '`'
+		return '\''
 	case TileRoad:
 		return '-'
 	case TileCliff:
-		return '>'
+		return '|'
 	case TileCave:
-		return '<'
+		return '@'
 	default:
 		return '?'
 	}
