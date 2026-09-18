@@ -3,53 +3,9 @@ package main
 func main() {
 	world := NewWorld(40, 15)
 
-	addBorders(world)
-
-	addRectangle(
-		world,
-		10,
-		3,
-		8,
-		4,
-		TileWall,
-	)
-
-	addRectangle(
-		world,
-		23,
-		8,
-		6,
-		3,
-		TileWater,
-	)
-
-	addRectangle(
-		world,
-		4,
-		9,
-		5,
-		3,
-		TileMountain,
-	)
-
-	addRectangle(
-		world,
-		19,
-		5,
-		10,
-		2,
-		TileForest,
-	)
-
-	addRectangle(
-		world,
-		30,
-		2,
-		5,
-		5,
-		TileSand,
-	)
-
+	generator := NewGenerator(42)
+	generator.Generate(world)
+	generator.smooth(world, 1)
 	PrintWorld(world)
 }
 

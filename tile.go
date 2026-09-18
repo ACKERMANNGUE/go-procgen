@@ -26,11 +26,11 @@ func (t Tile) Rune() rune {
 	case TileGround:
 		return '.'
 	case TileWall:
-		return '#'
+		return '█'
 	case TileWater:
 		return '~'
 	case TileMountain:
-		return '^'
+		return '▲'
 	case TileForest:
 		return '*'
 	case TileSand:
