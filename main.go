@@ -1,7 +1,7 @@
 package main
 
 func main() {
-	world := NewWorld(40, 15)
+	world := NewWorld(80, 25)
 
 	generator := NewGenerator(42)
 	generator.Generate(world)
